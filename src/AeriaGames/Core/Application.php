@@ -32,11 +32,11 @@ class Application
     public function execute()
     {
         // Get controller, action and parameters
-        $pathInfo = $this->request->getPath();
+        $routingData = $this->request->getRoutingData();
 
         // Creating an instance of controller
         try {
-            $controller = new $pathInfo['controller'];
+            $controller = new $routingData['controller'];
         } catch(\Exception $e) {
             // If no controller is set, return DefaultController::indexAction()
             $controller = new DefaultController();
@@ -44,7 +44,7 @@ class Application
         }
 
         // Executing controllers' action
-        $response = $controller->{$pathInfo['action']}($pathInfo['params']);
+        $response = $controller->{$routingData['action']}($routingData['params']);
 
         return $response;
     }

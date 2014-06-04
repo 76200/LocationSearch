@@ -33,7 +33,7 @@ class Request
      *
      * @return array
      */
-    public function getPath()
+    public function getRoutingData()
     {
         // Get the `controller` and `action` name from the `request`
         list($controller, $action, $params) = explode('/', $this->request['url']);
