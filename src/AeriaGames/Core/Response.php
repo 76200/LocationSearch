@@ -7,9 +7,9 @@ namespace AeriaGames\Core;
  */
 class Response
 {
-    private $data;
-    private $status;
-    private $contentType;
+    protected $data;
+    protected $status;
+    protected $contentType;
 
     const CONTENT_TYPE_HTML = 'text/html';
     const CONTENT_TYPE_JSON = 'application/json';
