@@ -1,0 +1,20 @@
+{
+    "name": "aeriagames/location-search",
+    "description": "AeriaGames LocationSearch application",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bartłomiej Czyż",
+            "email": "bartek@czyz.it",
+            "role": "developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.4"
+    }
+}
