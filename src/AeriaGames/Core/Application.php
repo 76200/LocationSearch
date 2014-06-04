@@ -27,7 +27,7 @@ class Application
     /**
      * Executes application
      *
-     * @return string
+     * @return Response
      */
     public function execute()
     {
