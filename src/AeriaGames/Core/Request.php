@@ -17,7 +17,7 @@ class Request
      *
      * @param array $request
      */
-    function __construct(array $request)
+    public function __construct(array $request)
     {
         // If route is set, then set request
         if (isset($request['url'])) {

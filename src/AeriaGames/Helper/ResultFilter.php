@@ -16,7 +16,7 @@ final class ResultFilter
     /**
      * @param array $results
      */
-    function __construct($results)
+    public function __construct($results)
     {
         $this->results = $results;
     }

@@ -23,7 +23,7 @@ class Response
      * @param int $status
      * @param string $contentType
      */
-    function __construct($data, $status = self::HTTP_OK, $contentType = self::CONTENT_TYPE_HTML)
+    public function __construct($data, $status = self::HTTP_OK, $contentType = self::CONTENT_TYPE_HTML)
     {
         $this->data = $data;
         $this->status = $status;

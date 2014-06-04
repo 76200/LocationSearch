@@ -24,7 +24,7 @@ class GooglePlacesAPI
     /**
      * Constructor.
      */
-    function __construct()
+    public function __construct()
     {
         $this->apiKey = $this->loadApiKey();
     }
