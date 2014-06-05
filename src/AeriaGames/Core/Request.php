@@ -38,15 +38,16 @@ class Request
         // Get the `controller` and `action` name from the `request`
         list($controller, $action, $params) = explode('/', $this->request['url']) + [null, null, null];
         $controller = 'AeriaGames\\Controller\\' . ucfirst($controller) . 'Controller';
+        $action = $action . 'Action';
 
-        if(!class_exists($controller)) {
+        if(!class_exists($controller) || !method_exists($controller, $action)) {
             $controller = 'AeriaGames\\Controller\\DefaultController';
-            $action = 'index';
+            $action = 'indexAction';
         }
 
         return [
             'controller' => $controller,
-            'action' => $action . 'Action',
+            'action' => $action,
             'params' => $params
         ];
     }
