@@ -15,7 +15,7 @@ Script will create `google.key` file inside `config` directory. **Make sure** yo
 Usage
 -----
 
-After you set up your vhost, you can run:
+After you set up your [vhost](vhost.md), you can run:
 
     http://localhost/places/search/<your query>
 
