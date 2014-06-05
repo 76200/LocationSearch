@@ -17,9 +17,6 @@ class PlacesController
      */
     public function searchAction($params = null)
     {
-        if (!is_string($params)) {
-            throw new \InvalidArgumentException('Invalid `param` argument: Expected type: "string"');
-        }
         $escaped = urlencode($params); // Forcing proper URL format
 
         try {

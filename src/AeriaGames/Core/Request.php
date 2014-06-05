@@ -36,10 +36,16 @@ class Request
     public function getRoutingData()
     {
         // Get the `controller` and `action` name from the `request`
-        list($controller, $action, $params) = explode('/', $this->request['url']);
+        list($controller, $action, $params) = explode('/', $this->request['url']) + [null, null, null];
+        $controller = 'AeriaGames\\Controller\\' . ucfirst($controller) . 'Controller';
+
+        if(!class_exists($controller)) {
+            $controller = 'AeriaGames\\Controller\\DefaultController';
+            $action = 'index';
+        }
 
         return [
-            'controller' => 'AeriaGames\\Controller\\' . ucfirst($controller) . 'Controller',
+            'controller' => $controller,
             'action' => $action . 'Action',
             'params' => $params
         ];
