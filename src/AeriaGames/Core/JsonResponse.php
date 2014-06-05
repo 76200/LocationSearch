@@ -12,11 +12,10 @@ class JsonResponse extends Response
      *
      * @param $data
      * @param int $status
-     * @param string $contentType
      */
-    public function __construct($data, $status = self::HTTP_OK, $contentType = self::CONTENT_TYPE_JSON)
+    public function __construct($data, $status = self::HTTP_OK)
     {
-        parent::__construct($data, $status, $contentType);
+        parent::__construct($data, $status, self::CONTENT_TYPE_JSON);
     }
 
 }
